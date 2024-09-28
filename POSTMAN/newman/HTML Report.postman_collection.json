@@ -1,0 +1,345 @@
+{
+	"info": {
+		"_postman_id": "f506e5f7-9811-46b6-97ea-91646b4009bd",
+		"name": "HTML Report",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34928651",
+		"_collection_link": "https://planetary-eclipse-181951.postman.co/workspace/Tobeto-K%C3%BCt%C3%BCphanesi~c79bbefd-10af-490e-a91a-74e50f785b7c/collection/34928651-f506e5f7-9811-46b6-97ea-91646b4009bd?action=share&source=collection_link&creator=34928651"
+	},
+	"item": [
+		{
+			"name": "/api/Auth/EnableEmailAuthenticator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/Auth/EnableEmailAuthenticator",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"EnableEmailAuthenticator"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"description": "Added as a part of security scheme: bearer"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/EnableEmailAuthenticator",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"EnableEmailAuthenticator"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/api/Auth/RevokeToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImRlMjVhY2RhLTU4MjItNDdlYy1iZDEyLWE2ZTVhMjhiMjBhMiIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6Im5hcmNoQGtvZGxhbWEuaW8iLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJBZG1pbiIsIm5iZiI6MTcxOTgzNTE4NCwiZXhwIjoxNzE5ODQxMTg0LCJpc3MiOiJuQXJjaGl0ZWN0dXJlQGtvZGxhbWEuaW8iLCJhdWQiOiJzdGFydGVyUHJvamVjdEBrb2RsYW1hLmlvIn0.xNQMy_B_0DyfCkwmyVn0J9GyK3-9ebUOP167aviPIZC1SqwZCunrP7akZ7Yf1iZPCF2mVEiKovWggss2KAXoHA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTUxMiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6ImI3MWVmYTFiLTU4MjMtNDI3Zi0xY2I3LTA4ZGM5OWM3MDEyZCIsImh0dHA6Ly9zY2hlbWFzLnhtbHNvYXAub3JnL3dzLzIwMDUvMDUvaWRlbnRpdHkvY2xhaW1zL2VtYWlsYWRkcmVzcyI6ImF5c2VrYXJhMjhAZ21haWwuY29tIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjpbIkF1dGguUmV2b2tlVG9rZW4iLCJNZW1iZXJzLlJlYWQiLCJNZW1iZXJzLkNyZWF0ZSIsIk1lbWJlcnMuVXBkYXRlIiwiQWRkcmVzc2VzLkFkbWluIiwiU3RyZWV0cy5BZG1pbiIsIk1hdGVyaWFscy5BZG1pbiIsIkJvcnJvd2VkTWF0ZXJpYWxzLkNyZWF0ZSIsIkJvcnJvd2VkTWF0ZXJpYWxzLlJlYWQiLCJCb3Jyb3dlZE1hdGVyaWFscy5Xcml0ZSIsIkJvcnJvd2VkTWF0ZXJpYWxzLlVwZGF0ZSIsIk1hdGVyaWFsQ29waWVzLlJlYWQiLCJNYXRlcmlhbENvcGllcy5Xcml0ZSIsIk1hdGVyaWFsQ29waWVzLkNyZWF0ZSIsIk1hdGVyaWFsQ29waWVzLlVwZGF0ZSIsIkxvY2F0aW9ucy5BZG1pbiIsIk1hdGVyaWFsR2VucmVzLkFkbWluIiwiTWF0ZXJpYWxQcm9wZXJ0aWVzLkFkbWluIiwiTWF0ZXJpYWxUeXBlcy5BZG1pbiJdLCJuYmYiOjE3MTk4MzYwODAsImV4cCI6MTcxOTg0MjA4MCwiaXNzIjoibkFyY2hpdGVjdHVyZUBrb2RsYW1hLmlvIiwiYXVkIjoic3RhcnRlclByb2plY3RAa29kbGFtYS5pbyJ9.GxXwZHnj2Bx3bmE8yt3Jz50QxVhqtrDMTsf39DPk8ZXWEv4UIxWFDs_z9xbBofTpHF2Lu1eDz_tlpvIQFdQXVA\"",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/Auth/RevokeToken",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"RevokeToken"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"description": "Added as a part of security scheme: bearer"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<string>",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/RevokeToken",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"RevokeToken"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/api/Auth/VerifyEmailAuthenticator",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/Auth/VerifyEmailAuthenticator?ActivationKey=<string>",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"VerifyEmailAuthenticator"
+					],
+					"query": [
+						{
+							"key": "ActivationKey",
+							"value": "<string>"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"description": "Added as a part of security scheme: bearer"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/VerifyEmailAuthenticator?ActivationKey=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"VerifyEmailAuthenticator"
+							],
+							"query": [
+								{
+									"key": "ActivationKey",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "/api/Auth/VerifyOtpAuthenticator",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{bearerToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\"string\"",
+					"options": {
+						"raw": {
+							"headerFamily": "json",
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/api/Auth/VerifyOtpAuthenticator",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"api",
+						"Auth",
+						"VerifyOtpAuthenticator"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer <token>",
+								"description": "Added as a part of security scheme: bearer"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "<string>",
+							"options": {
+								"raw": {
+									"headerFamily": "json",
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/Auth/VerifyOtpAuthenticator",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"Auth",
+								"VerifyOtpAuthenticator"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "text",
+					"header": [],
+					"cookie": [],
+					"body": ""
+				}
+			]
+		}
+	]
+}
